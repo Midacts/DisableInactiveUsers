@@ -14,7 +14,7 @@ $OUDisabled =  '# [NAME OF OU FOR DISBALED USERS]'
 # Log file for list of disabled users
 $logFinal = "# [NAME OF LOG FILE THAT CONTAINS A LIST OF ALL DISABLED USERS]"
 # Log file for group membership
-$logGrpMem = "# {NAME OF LOG FILE THAT SAVES INACTIVE USER'S GROUP MEMBERSHIP]"
+$logGrpMem = "# [NAME OF LOG FILE THAT SAVES INACTIVE USER'S GROUP MEMBERSHIP]"
 
 ##########################
 ###FINDS INACTIVE USERS###
@@ -68,7 +68,7 @@ ForEach ($DisabledUser in $gad) {
 # DISABLES USER'S ACCOUNT
   Disable-ADAccount $DisabledUser
 # MOVES USER TO 'DISABLED' OU
-  Move-ADObject -identity $DisabledUser –TargetPath $OUDisabled
+  Move-ADObject -identity $DisabledUser ï¿½TargetPath $OUDisabled
 # LOGGING
 	$obj = New-Object PSObject
 
